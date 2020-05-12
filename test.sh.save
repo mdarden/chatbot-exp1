@@ -1,0 +1,1 @@
+curl -u "apikey:X_eRNi2cqTRRn5KrN4gNxiPYNjBj5Nm4nbYoGOjrXuBb" "https://api.us-south.assistant.watson.cloud.ibm.com/instances/d22ab405-2b89-4939-a151-ab7c5a7fc147/v1/workspaces?version=2020-04-01"
