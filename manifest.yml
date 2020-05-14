@@ -1,4 +1,19 @@
----
+applications:
+- disk_quota: 256M
+  domain: null
+  host: null
+  instances: 1
+  memory: 256M
+  name: watsonbankingchatbot
+  path: .
+  random-route: false
+  routes:
+  - route: chatbot-exp1.us-south.cf.appdomain.cloud
+  services:
+  - wbc-assistant-service
+  - wbc-natural-language-understanding-service
+  - wbc-discovery-service
+  timeout: 180
 declared-services:
   wbc-assistant-service:
     label: conversation
@@ -9,15 +24,3 @@ declared-services:
   wbc-natural-language-understanding-service:
     label: natural-language-understanding
     plan: free
-applications:
-- path: .
-  memory: 256M
-  instances: 1
-  name: watsonbankingchatbot
-  disk_quota: 256M
-  random-route: false
-  timeout: 180
-  services:
-  - wbc-assistant-service
-  - wbc-natural-language-understanding-service
-  - wbc-discovery-service

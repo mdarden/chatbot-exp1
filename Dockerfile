@@ -1,6 +1,6 @@
 FROM ibmcom/ibmnode
 
-RUN mkdir /app
+ADD . /app
 WORKDIR /app
 
 ENV NODE_ENV production
