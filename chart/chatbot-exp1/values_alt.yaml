@@ -35,6 +35,9 @@ istio:
   enabled: false
   weight: 100
 services:
-  chatbot-exp1:
+  assistant:
     secretKeyRef: mysecret
-
+  nlu:
+    secretKeyRef: mysecret
+  discovery:
+    secretKeyRef: mysecret

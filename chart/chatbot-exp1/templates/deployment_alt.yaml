@@ -25,10 +25,22 @@ spec:
     spec:
       containers:
       - env:
-        - name: chatbot-exp1
+        - name: service_assistant
           valueFrom:
             secretKeyRef:
-              name: {{ .Values.services.chatbot-exp1.secretKeyRef}}
+              name: {{ .Values.services.assistant.secretKeyRef}}
+              key: binding
+              optional: true
+        - name: service_nlu
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.services.nlu.secretKeyRef}}
+              key: binding
+              optional: true
+        - name: service_discovery
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.services.discovery.secretKeyRef}}
               key: binding
               optional: true
         - name: PORT
