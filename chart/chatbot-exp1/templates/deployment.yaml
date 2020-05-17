@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - env:
-        - name: chatbot-exp1
+        - name: chatbot-exp1default-app
           valueFrom:
             secretKeyRef:
               name: {{ .Values.services.chatbotexp1.secretKeyRef}}
@@ -39,7 +39,7 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         livenessProbe:
           httpGet:
-            path: /health
+            path: /
             port: {{ .Values.service.servicePort }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds}}
