@@ -35,6 +35,6 @@ istio:
   enabled: false
   weight: 100
 services:
-  chatbot-exp1:
+  chatbotexp1:
     secretKeyRef: mysecret
 

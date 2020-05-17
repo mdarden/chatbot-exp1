@@ -28,7 +28,7 @@ spec:
         - name: chatbot-exp1
           valueFrom:
             secretKeyRef:
-              name: {{ .Values.services.chatbot-exp1.secretKeyRef}}
+              name: {{ .Values.services.chatbotexp1.secretKeyRef}}
               key: binding
               optional: true
         - name: PORT
