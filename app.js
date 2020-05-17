@@ -38,6 +38,10 @@ let auth;
 let url;
 let disableSSL = false;
 
+//DEBUGGER
+console.log("Getting container environment")
+console.log(process.env)
+
 try {
   // ASSISTANT should be used
   auth = getAuthenticatorFromEnvironment('ASSISTANT');
