@@ -25,47 +25,11 @@ spec:
     spec:
       containers:
       - env:
-        - name: ASSISTANT_AUTH_TYPE
-          value : "{{ .Values.services.assistant.authtype }}"
-        - name: ASSISTANT_APIKEY
+        - name: chatbot-exp1default-app
           valueFrom:
             secretKeyRef:
-              name: {{ .Values.services.assistant.secretKeyRef}}
-              key: apikey
-              optional: true
-        - name: ASSISTANT_URL
-          valueFrom:
-            secretKeyRef:
-              name: {{ .Values.services.assistant.secretKeyRef}}
-              key: url
-              optional: true
-        - name: DISCOVERY_AUTH_TYPE
-          value : "{{ .Values.services.discovery.authtype }}"
-        - name: DISCOVERY_APIKEY
-          valueFrom:
-            secretKeyRef:
-              name: {{ .Values.services.discovery.secretKeyRef}}
-              key: apikey
-              optional: true
-        - name: DISCOVERY_URL
-          valueFrom:
-            secretKeyRef:
-              name: {{ .Values.services.discovery.secretKeyRef}}
-              key: url
-              optional: true
-        - name: NLU_AUTH_TYPE
-          value : "{{ .Values.services.nlu.authtype }}"
-        - name: NLU_APIKEY
-          valueFrom:
-            secretKeyRef:
-              name: {{ .Values.services.nlu.secretKeyRef}}
-              key: apikey
-              optional: true
-        - name: NLU_URL
-          valueFrom:
-            secretKeyRef:
-              name: {{ .Values.services.nlu.secretKeyRef}}
-              key: url
+              name: {{ .Values.services.chatbotexp1.secretKeyRef}}
+              key: binding
               optional: true
         - name: PORT
           value : "{{ .Values.service.servicePort }}"

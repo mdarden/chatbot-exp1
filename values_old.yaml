@@ -35,12 +35,6 @@ istio:
   enabled: false
   weight: 100
 services:
-  assistant:
-    authtype: iam
-    secretKeyRef: assistant-secret
-  discovery:
-    authtype: iam
-    secretKeyRef: discovery-secret
-  nlu:
-    authtype: iam
-    secretKeyRef: nlu-secret
+  chatbotexp1:
+    secretKeyRef: mysecret
+
