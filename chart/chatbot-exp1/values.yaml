@@ -37,10 +37,10 @@ istio:
 services:
   assistant:
     authtype: iam
-    secretKeyRef: assistant-secret
+    secretKeyRef: binding-watson-assistant-14jun
   discovery:
     authtype: iam
-    secretKeyRef: discovery-secret
+    secretKeyRef: binding-discovery-18jun
   nlu:
     authtype: iam
-    secretKeyRef: nlu-secret
+    secretKeyRef: binding-natural-language-understanding-19jun
